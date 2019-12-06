@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>BlockMed</title>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/web3-min-js@1.0.0/web3.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script language="javascript" type="text/javascript" src="js/abi.js"></script>
+    <script language="javascript" type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="icon" href="img/favicon.ico" type="img/favicon" sizes="16x16">
+
+</head>
+
+<body class="bg_light">
+	<header>
+		<a href="" ><img class="logo" src="img/blockmed_logo.png" width="140px" height="150px" /></a>
+	</header>
+
+	<div class="left_menu">
+		<h3>Dados Pessoais</h3>
+			<a href=""><ul class="ul">Inicio</ul></a>
+			<a href="#" onclick="showExams()"><ul class="ul">Exames</ul></a>
+		<h3>Medico</h3>
+			<a href="#" onclick="medic()"><ul class="ul">Pacientes</ul></a>
+		<h3>Laboratorio</h3>
+			<a href="#" onclick="lab()"><ul class="ul">Pacientes</ul></a>
+    </div>
+    
+    <div class="content">
+        <h2 id="ClientName" >BlockMed</h2>
+        <p id="ClientInfo">""</p>
+        <form id="form">
+          <label id="address_" >Endereço virtual:</label><br>
+          <input id="address" type="password" name="address" required minlength="42" maxlength="42"></br><br>
+          
+          <label id="nome_">Nome: </label><br>
+          <input id="nome" type="text" name="name"></br><br>
+
+          <label id="age_">Idade: </label><br>
+          <input id="age" type="number" name="age"></br><br>
+
+          <label id="blood_">Tipo sanguineo: </label><br>
+          <input id="blood" type="text" name="blood"></br><br>
+
+          <label id="allergies_">Alergias: </label><br>
+          <input id="allergies" type="text" name="allergies"></br><br>
+
+          <label id="exam_" >Resultado do exame: </label><br>
+          <input id="exam" type="text" name="exame"></br><br>
+          
+          <input id="submit" type="button" onclick="process()" value="Confirmar">
+        </form>
+        <input id="addClient" type="button" onclick="addClient()" value="Adicionar Cliente">
+        <input id="addExam_" type="button" onclick="addExam_()" value="Adicionar Exame">
+        <!--p><small>Exemplo de front-end para um smart contract da rede Ethereum.</small></p-->
+        <!--Div that will hold the pie chart-->
+    	<div id="curve_chart"></div>
+    </div>
+
+  	<footer>
+            <p><small>IMD - IMD0729</small></p>
+    </footer>
+</body>
+
+</html>
